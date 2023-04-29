@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="emp3reg.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    	rel="stylesheet">
+	
+</head>
+<body>
+
+	<div class="regform"><h1>Employee Registration Form</h1></div>
+
+	
+	<div class="main">
+			<form>
+			<h2 class="name">Username</h2>
+			<input type="text" name="uname" class="uname" placeholder="Enter Username">
+			<div id="name">
+			<h2 class="name">Name</h2>
+			<input class="firstname" type="text" placeholder="First Name" name="first_name"><br>
+			<!-- <label class="firstlabel">First Name</label><br> -->
+			<input class="lastname" type="text" placeholder="Last Name" name="last_name"><br>
+			<!-- <label class="lastlabel">Last Name</label> -->
+	</div>
+	
+			<h2 class="name">Email</h2>
+			<input type="email"  class="email" placeholder="Enter Email Address" name="email">
+
+			          
+			 
+			<h2 class="name">Phone Number</h2>
+			<input type="text" name="number" class="number" placeholder="Enter Contact Number" pattern="[0-9]{11}">
+
+
+			<h2 class="name">Address</h2>
+			<input class="present_address" type="text" placeholder="Present Address"  name="present_address">
+			<input class="permanent_address" type="text" placeholder="Permanent Address" name="permanent_address">
+
+
+
+
+			<h2 class="name"> Choose Work Sector </h2>
+			
+			<select class="option" name="subject">
+				<option disabled="disabled" selected="selected">~Choose Option</option>
+				<option>Software Development</option>
+				<option>App Development</option>
+				<option>Logo Design</option>
+				<option>Banner Design</option>
+				<option>Business Card Design</option>
+				<option>Photos and Videos Editing</option>
+			</select>
+
+			<button type="submit" class="btnnn mt-3 mb-5">Register</button>
+
+
+
+
+</div>
+</form>
+</body>
+</html>

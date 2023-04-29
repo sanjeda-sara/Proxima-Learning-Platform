@@ -1,0 +1,50 @@
+{% load static %}
+{% static "img/team" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<!-- BASICS -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Proxima Home</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/isotope.css' %}" media="screen" />
+		<link rel="stylesheet" href="{% static 'js/fancybox/jquery.fancybox.css' %}" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!--font awesome cdn-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+		<!-- skin -->
+		<link rel="stylesheet" href="{% static 'skin/default.css' %}">
+</head>
+<body>
+<section id="section-contact" class="section appear clearfix">
+        <div class="container">
+            {% for cont in conts %}
+                <h3>{{ cont.cus_name }}</h3>
+                <p>{{ cont.cus_sms }}</p>
+            {% endfor %}
+        </div>
+</section>
+
+
+
+<script src="{% static 'js/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>-->
+	<script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+	<script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+	<script src="{% static 'js/fancybox/jquery.fancybox.pack.js' %}"></script>
+	<script src="{% static 'js/skrollr.min.js' %}"></script>
+	<script src="{% static 'js/jquery.scrollTo-1.4.3.1-min.js' %}"></script>
+	<script src="{% static 'js/jquery.localscroll-1.2.7-min.js' %}"></script>
+	<script src="{% static 'js/stellar.js' %}"></script>
+	<script src="{% static 'js/jquery.appear.js' %}"></script>
+	<script src="{% static 'js/validate.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

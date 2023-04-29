@@ -1,0 +1,116 @@
+*{
+margin: 0;
+padding: 0;
+color: #C0C0C0
+font-family: 'Archivo Narrow', sans-serif;
+}
+#banner{
+	background: linear-gradient(rgba(0,0,0,0.0001),#C0C0C0 )
+	,url(5.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 92vh;
+}
+.banner-text{
+	text-align: center;
+	color:black;
+	padding-top: 10px;
+}
+.banner-text h1{
+	font-size: 50px;
+}
+.banner-text p1{
+	font-size:35px;
+	}
+.banner-text h2{
+	padding-top: 110px;
+	font-size: 40px;
+}
+.banner-text h3{
+	text-align: left;
+	width: 400px;
+	height: 100px
+	padding-top: 60px;
+	font-size: 35px;
+}
+.youtube1{
+	padding:200px
+	width:50%; 
+	position: relative;
+	border: 10px solid black;
+}
+.banner-text h4{
+	text-align: left;
+	width: 400px;
+	height: 100px
+	padding-top: 60px;
+	font-size: 35px;
+}
+.youtube2{
+	background: linear-gradient(rgba(0,0,0,0.0001),#A9A9A9 );
+	color: #C0C0C0
+	padding:200px
+	width:50%; 
+	position: relative;
+	border: 10px solid black;
+}
+.banner-text h5{
+	text-align: left;
+	width: 400px;
+	height: 100px
+	padding-top: 60px;
+	font-size: 35px;
+}
+.youtube3{
+	background: linear-gradient(rgba(0,0,0,0.0001),#A9A9A9 );
+	color: #C0C0C0
+	padding:200px
+	width:50%; 
+	position: relative;
+	border: 10px solid black;
+}
+.banner-text h6{
+	text-align: left;
+	width: 500px;
+	height: 100px
+	padding-top: 60px;
+	font-size: 35px;
+}
+.youtube4{
+	background: linear-gradient(rgba(0,0,0,0.0001),#A9A9A9 );
+	color: #C0C0C0
+	padding:200px
+	width:50%S; 
+	position: relative;
+	border: 10px solid black;
+}
+.banner-text h7{
+	text-align: left;
+	width: 700px;
+	height: 100px
+	padding-top: 40px;
+	font-size: 25px;
+}
+.youtube5{
+	background: linear-gradient(rgba(0,0,0,0.0001),#A9A9A9 );
+	color: #C0C0C0
+	padding:200px
+	width:50%; 
+	position: relative;
+	border: 10px solid black;
+}
+.banner-text h8{
+	text-align: left;
+	width: 600px;
+	height: 100px
+	padding-top: 60px;
+	font-size: 35px;
+}
+.youtube6{
+	background: linear-gradient(rgba(0,0,0,0.0001),#A9A9A9 );
+	color: #C0C0C0
+	padding:200px
+	width:50%S; 
+	position: relative;
+	border: 10px solid black;
+}

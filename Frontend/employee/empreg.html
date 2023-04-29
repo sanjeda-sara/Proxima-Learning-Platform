@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style type="text/css">
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background-image:url(6a.jpg);
+		background-position: center;
+		background-size: cover;
+		font-family: sans-serif;
+		margin-top: 40px;
+	}
+	.regform{
+		width: 800px;
+		background-color: rgb(0,0,0,0.3);
+		margin: auto;
+		color: white;
+		padding: 10px 0px 10px 0px;
+		text-align: center;
+		border-radius: 15px 15px 0px 0px; 
+	}
+	.main{
+		background-color: rgb(0,0,0,0.25);
+		width: 800px;
+		margin: auto;
+	}
+	form{
+		padding: 10px;
+	}
+
+
+
+	#name{
+		width: 80%;
+		height: 80px;
+	}
+	.name{
+		margin-left: 25px;
+		margin-top: 30px;
+		width: 125px;
+		color: white;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.uname{
+		position: relative;
+		left: 200px;
+		top: -30px;
+		width: 480px;
+		line-height: 40px;
+		border-radius:6px;
+		padding: 0 10px;
+		font-size:16px;
+		outline-color: #008080;
+	}
+	.firstname{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		border-radius:6px;
+		padding: 0 10px;
+		font-size:16px;
+		outline: all;
+		outline-color: #008080;
+
+	}
+	.lastname{
+		position: relative;
+		left: 460px;
+		top: -80px;
+		line-height: 40px;
+		border-radius: 6px;
+		padding: 0 10px;
+		font-size: 16px;
+		color: #555;
+		outline: all;
+		outline-color: #008080;
+	}
+/*	.firstlabel{
+		position: relative;
+		color: #E5E5E5;
+		text-transform: capitalize;
+		font-size: 14px;
+		left: 205px;
+		top: -38px;
+		
+	}
+	.lastlabel{
+		position: relative;
+		color: #E5E5E5;
+		text-transform: capitalize;
+		font-size: 14px;
+		left: 465px;
+		top: -115px;
+		
+	}*/
+	.email{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		width: 480px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		outline: all;
+		outline-color: #008080;
+	}
+	.number{
+		position: relative;
+		left: 200px;
+		top: -55px;
+		line-height: 40px;
+		width: 480px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		outline: all;
+		outline-color: #008080;
+
+	}
+	.present_address{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		width: 230px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		overflow: hidden;
+		outline: all;
+		outline-color: #40B5AD;
+	}
+	.permanent_address{
+		position: relative;
+		left: 230px;
+		top: -37px;
+		line-height: 40px;
+		width: 223px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		outline: all;
+		outline-color: #008080;
+	}
+
+	.option{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		width: 488px;
+		height: 40px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		outline: all;
+		outline-color: #008080;
+		overflow: hidden;
+	}
+	.option option{
+		font-size: 17px;
+	}
+	/*.button{
+		background-color: #3BAF9F;
+		display: block;
+		margin-left: 20px 0px 0px 20px;
+		text-align: left;
+		border-radius: 12px;
+		border:3px solid #366473;
+		padding: 14px 110px;
+		outline: none;
+		color: white;
+		cursor: pointer;
+		transition: 0.25px;
+	}*/
+	.btnnn{
+            border: none;
+            outline: none;
+            height:  50px;
+            width: 100%;
+            background-color: teal;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+
+          }
+          .btnnn:hover{
+            background: teal;
+            border: 1px solid;
+            color: white;
+            box-shadow: 0 5px 15px rgba(145,92,182,0.4)
+          }
+
+</style>
+
+
+
+</head>
+<body>
+	
+<div class="regform"><h1>Employee Registration Form</h1></div>
+<div class="main">
+	<form>
+		<h2 class="name">Username</h2>
+		<input type="text" name="uname" class="uname" placeholder="Enter Username">
+	<div id="name">
+	<h2 class="name">Name</h2>
+	<input class="firstname" type="text" placeholder="First Name" name="first_name"><br>
+	<!-- <label class="firstlabel">First Name</label><br> -->
+	<input class="lastname" type="text" placeholder="Last Name" name="last_name"><br>
+	<!-- <label class="lastlabel">Last Name</label> -->
+</div>
+	
+<h2 class="name">Email</h2>
+<input type="email"  class="email" placeholder="Enter Email Address" name="email">
+
+          
+ 
+<h2 class="name">Phone Number</h2>
+<input type="text" name="number" class="number" placeholder="Enter Contact Number" pattern="[0-9]{11}">
+
+
+<h2 class="name">Address</h2>
+<input class="present_address" type="text" placeholder="Present Address"  name="present_address">
+<input class="permanent_address" type="text" placeholder="Permanent Address" name="permanent_address">
+
+
+
+
+<h2 class="name"> Choose Work Sector </h2>
+<select class="option" name="subject">
+<option disabled="disabled" selected="selected">~Choose Option</option>
+<option>Software Development</option>
+<option>App Development</option>
+<option>Logo Design</option>
+<option>Banner Design</option>
+<option>Business Card Design</option>
+<option>Photos and Videos Editing</option>
+</select>
+
+<button type="submit" class="btnnn mt-3 mb-5">Register</button></div>
+
+
+
+
+</form>
+
+</body>
+</html>

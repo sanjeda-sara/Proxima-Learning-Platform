@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <title>Proxima Courses</title>
+    <style type="text/css">
+        .head{
+            background: #2b2121;
+        }
+        .para{
+            font-size: 15px;
+        }
+        button{
+    font-size: 18px;
+    margin: 15px auto;
+    padding: 5px;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #ffffff00
+    }
+    button{
+        transition: 0.4s;
+    }
+    button:hover{
+        background-color: #BC8F8F;
+    }
+    #ctr{
+        top: 320px;
+        text-align: center;
+            }
+    	.option{
+		position: relative;
+		left: 0px;
+		top: -10px;
+		line-height: 40px;
+		width: 200px;
+		height: 40px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		outline-color: #008080;
+		overflow: hidden;
+	}
+
+	.option option{
+		font-size: 17px;
+	}
+    </style>
+</head>
+<body>
+    <header class="head text-center text-white">
+        <h1>Courses</h1>
+    </header>
+    <div class = "container">
+        <div class = "text-center py-2">
+            <h4>Greetings and a warm welcome to Proxima!</h4>
+            <p class="para">
+                It is correctly said that learning has no age limit.
+                The learning might be out of your curiosity, your own interest, for your career or might just be for fun.<br>
+                Do you want to build your career in the IT sector and are perplexed how to start?
+                Then, You’re in the right place.<br>
+                With Proxima, learning becomes even more easier and materials are easily accessible.
+                Our experts are always here to help you and to guide you in a structured way.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="services">
+                 <h1>Course Categories</h1>
+                {% if user.is_authenticated %}
+                <p>Get Your Free courses, Click Down</p>
+                <form action="{%url 'free_course'%}">
+                    <button id="btTwo">Free</button>
+                <p>For doing paid course, Choose Option and Click "Paid"</p>
+                </form>
+                    <form action="{% url 'paid_course'%}" method="post">
+                {% csrf_token %}
+                <select class="option" name="subject">
+				    <option disabled="disabled" selected="selected">~Choose Option</option>
+                    {% for corse in corses %}
+				        <option>{{ corse.c_id }}</option>
+                    {% endfor %}
+                </select>
+
+                <button id="btOne" type="submit" class="btnnn mt-3 mb-5">Paid</button>
+            </form>
+                {% else %}
+                <p>You have to create an account to get free and paid courses.</p>
+                {% endif %}
+            </div>
+            <div class="row">
+                {% for corse in corses %}
+                <div class="col-md-4 text center">
+            		<div class="icon">
+            			<i class="fa fa-book"></i>
+            		</div>
+                    <div id=ctr>
+                    </div>
+            		<h3>{{ corse.c_id }}. {{corse.c_name}}</h3>
+            		<p>{{ corse.c_des }}</p>
+            	</div>
+                {% endfor %}
+
+        </div>
+    </div>
+    	<section id="footer" class="section footer">
+		<div class="container">
+			<div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
+				<div class="col-sm-12 align-center">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoTumblr" title="Tumblr"><i class="fab fa-tumblr"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+				</div>
+			</div>
+
+			<div class="row align-center copyright">
+					<div class="col-sm-12"><p>Copyright &copy; 2020 Proxima - by <a href="#">Proxima</a></p></div>
+			</div>
+		</div>
+
+	</section>
+
+    <!--<h1>Greetings and a warm welcome to Proxima!
+It is correctly said that learning has no age limit. The learning might be out of your curiosity, your own interest, for your career or might just be for fun. Do you want to build your career in the IT sector and are perplexed how to start? You’re in the right place. With Proxima, learning becomes even more easier and materials are easily accessible. Our experts are always here to help you and to guide you in a structured way.The courses that we offer are-
+1.      Introduction to Java
+2.      Introduction to Python
+3.      Introduction to Bootstrap
+4.      Adobe Photoshop and Illustrator
+5.      Video Editing
+We do not offer any crash course since we believe in the quality over anything else. Enroll now to start learning in an environment where we bring out the best creative side in you. You would get to do an in-hand project and a certificate upon completing the course.
+You can opt for the free version which would give you access to the sources and materials of your preferred course upon registering. So without any further delay, sign up now if you haven’t yet and start learning.
+You can never go wrong in adding a new skill in your bucket and moving further toward a brighter future. Happy Learning! </h1>-->
+	<script src="{% static 'js/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>-->
+	<script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+	<script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+	<script src="{% static 'js/fancybox/jquery.fancybox.pack.js' %}"></script>
+	<script src="{% static 'js/skrollr.min.js' %}"></script>
+	<script src="{% static 'js/jquery.scrollTo-1.4.3.1-min.js' %}"></script>
+	<script src="{% static 'js/jquery.localscroll-1.2.7-min.js' %}"></script>
+	<script src="{% static 'js/stellar.js' %}"></script>
+	<script src="{% static 'js/jquery.appear.js' %}"></script>
+	<script src="{% static 'js/validate.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

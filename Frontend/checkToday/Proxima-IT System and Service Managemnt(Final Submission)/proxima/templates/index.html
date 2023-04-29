@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "img/team" as baseUrl %}
+<html lang="en">
+    <head>
+		<!-- BASICS -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Proxima Home</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/isotope.css' %}" media="screen" />
+		<link rel="stylesheet" href="{% static 'js/fancybox/jquery.fancybox.css' %}" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!--font awesome cdn-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+		<!-- skin -->
+		<link rel="stylesheet" href="{% static 'skin/default.css' %}">
+        <style>
+            .featured {
+	            padding: 200px 0 60px;
+                background-color: #59dec9;
+	            color: #fdfdfd;
+                text-align: center;
+            }
+
+            .featured h2.slogan {
+	            color: #fff;
+	            font-size: 48px;
+	            font-weight: 900;
+	            text-align: center;
+            }
+
+            /* inner heading */
+            featured.inner {
+	            background: #eee;
+	            padding: 150px 0 50px;
+            }
+             .service-section{
+ 	        background: #e4eaf5;
+ 	        padding: 50px 0;
+            }
+             .hello{
+                 padding: 10px;
+                 background-color: #274f98;
+                 margin : 10px;
+                 font-size: 20px;
+                 color: white;
+                 font-weight: bold;
+             }
+             .para{
+                 background: #4ba4a4;
+                 font-size: 18px;
+
+             }
+                 #ctr{
+                    top: 320px;
+                    text-align: center;
+                    }
+    	            .option{
+		                position: relative;
+		                left: 0px;
+		                top: -10px;
+		                line-height: 40px;
+		                width: 200px;
+		                height: 40px;
+		                border-radius: 6px;
+		                padding: 0 22px;
+		                font-size: 16px;
+		                color: #555;
+		                outline-color: #008080;
+		                overflow: hidden;
+	                }
+
+	            .option option{
+		            font-size: 17px;
+	            }
+        </style>
+    </head>
+	 
+    <body>
+    <!--navigation bar-->
+		<section id="header" class="appear"></section>
+		<div class="navbar navbar-fixed-top navbar-dark" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:80px; height:80px; background-color:rgba(0,0,0,1);">
+			 <div class="container">
+				<div class="navbar-header">
+                    <!--<a href="#" class="navbar-brand">
+					<img src="img/logo/Proxima dp .jpg" alt="logo" style="width: 80px;">-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+                    <h1><a class="navbar-brand" href='/' data-0="line-height:90px;" data-300="line-height:50px;">			Proxima
+					</a></h1>
+
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" data-0="margin-top:20px; margin-left:auto" data-300="margin-top:5px;">
+						<li class="nav-item active"><a class="nav-link" href='/'>Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section-newsevents">News and <br> Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts/randr">Ratings and <br> Review</a></li>
+						<li class="nav-item"><a class="nav-link" href="contacts/contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses/courses">Course</a></li>
+
+                        {% if user.is_authenticated %}
+                        <li class="hello"> Hello, <br> {{ user.username }}</li>
+                        <li class="nav-item"><a class="nav-link" href="accounts/logout">Log Out</a></li>
+                            <li class="nav-item"><a class="nav-link" href="accounts/profile">User<br>Account</a></li>
+                        {% else %}
+                             <li class="nav-item"><a class="nav-link" href="accounts/apply_employee">Apply to be an <br> Employee</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accounts/signin">Sign In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accounts/register">Sign Up</a></li>
+                        {% endif %}
+
+					</ul>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</div>
+
+<!--service-->
+        <div class="featured">
+			<div class="container text-center">
+				<div class="row mar-bot40">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="align-center">
+                            <img class="d-block m-auto img-fluid" src="{% static 'img/logo/Proxima logo 1.png' %}">
+							<h2 class="slogan">Welcome to Proxima</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+					<div class="col-lg-12">
+							<p class="para rounded">
+                                Proxima is a platform focusing on two main criteria - providing IT-related services to those who need assistance and on skill development where one can enroll in the courses that we offer to increase your knowledge and polish your skills.<br>
+                                If you are here on our page, that means you are either looking for some sort of assistance with your job/business or you are here because of your curiosity to learn.<br>
+                                We offer assistance with Photos and video editing, Logo designing, Business card, Banner design, App development and Software development and Proxima aims to reduce your cost and hassle by ensuring that you get most of your software or IT related work from one place instead of going or approaching different places for different tasks.<br>
+                                When it comes to our courses, we offer Introduction to Java, Introduction to Python, Introduction to Bootstrap, Adobe Photoshop and Illustrator and Video Editing. Proxima tries to make learning as accessible as possible. Please check the “Courses” section for more details.
+                                <!--The purpose of Proxima is to facilitate learning, giving you the wings to fly so that nothing can hold you back and to provide professional services to clients in the IT field. Proxima weaves your dream, gives it a structure turning it into reality and preparing you to go out there, stronger- all that you need to take a step forward moving toward that one goal!-->
+							</p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- services -->
+		<div class="service-section text-center">
+		<div class="container"> 
+		    <div class="title"><h2 class="font-weight-bold text-bold pb-3">Services</h2>
+                <!--<form action="index.html" method="post">
+                    <input type="submit" value="order" placeholder="order" name="order">
+                </form>-->
+            {% if user.is_authenticated %}
+            <p>For getting any service, Choose Option and Click "Order"</p>
+            <form action="{%url 'service_order'%}" method="post">
+            {% csrf_token %}
+                <select class="option" name="subject" required>
+				    <option disabled="disabled" selected="selected">~Choose Option</option>
+                    {% for ser in sers %}
+                        <option>{{ ser.s_id }}</option>
+                    {% endfor %}
+                </select>
+            <br>
+                <input type="submit" value="order" placeholder="Order" name="order">
+            </form>
+                {% else %}
+                <p>Login or Create Accout to place order</p>
+            {% endif %}
+            </div>
+            <br><br>
+			<div class="row mar-bot40">
+                {% for ser in sers %}
+				<div class="col-lg-4 p-2 border border-primary">
+					<div class="align-center">
+						<i class="p-2 mb-4 fa-5x text-gray rounded fas fa-photo-video"></i>
+						<h4 class="text-bold text-uppercase">{{ ser.s_id }}. {{ ser.s_name }}</h4>
+                        <p class="front-weight-bold">{{ ser.c_des }}
+						</p>
+					</div>
+				</div>
+					{% endfor %}
+				<!--<div class="col-lg-4 p-2 border border-primary" >
+					<div class="align-center">
+						<i class="p-3 mb-4 fa-5x text-gray rounded fas fa-infinity"></i>
+						<h4 class="text-bold text-uppercase">Logo Design</h4>
+						<p>Amplify your brand with a dynamic advertising logo design, that would catch the eyes of your
+                            audience and would stay in their mind for the longest.
+						</p>
+					</div>
+				</div>
+                <div class="col-lg-4 p-2 border border-primary" >
+					<div class="align-center">
+						<i class="p-2 mb-4 fa-5x text-gray rounded fas fa-address-card"></i>
+						<h4 class="text-bold text-uppercase">Business Card</h4>
+						<p class="front-weight-bold">A  business card sets the first impression about you and your company on the very first day.
+                            Therefore, having a business card that shows your professionalism is important.
+						</p>
+					</div>
+				</div>
+            </div>
+            <div class="row mar-bot40">
+                <div class="col-lg-4 p-2 border border-primary" >
+					<div class="align-center">
+						<i class="p-2 mb-4 fa-5x text-gray rounded fas fa-image"></i>
+						<h4 class="text-bold text-uppercase">Banner Design</h4>
+						<p class="front-weight-bold">Banners are used to draw attention to a business or
+                            an event and are instantly noticeable because of their size or their color.
+                            In any busy area, a banner can be used to separate a business from the rest of the crowd,
+                            therefore having an eye-catching banner for any business or event is a must.
+						</p>
+					</div>
+				</div>
+                <div class="col-lg-4 p-2 border border-primary" >
+					<div class="align-center">
+						<i class="p-2 mb-4 fa-5x text-gray rounded fas fa-mobile-alt"></i>
+						<h4 class="text-bold text-uppercase">App Development</h4>
+						<p class="front-weight-bold">App development has the unique ability to access a large number of potential consumers since it has Accessibility from Variety of Platforms,
+                            Targeted Audience, Efficiency and Effectiveness to engage with customers everywhere.
+						</p>
+					</div>
+				</div>
+			
+				<div class="col-lg-4 p-2 border border-primary" >
+					<div class="align-center">
+						<i class="p-3 mb-4 fa-5x text-gray rounded fab fa-uncharted"></i>
+						<h4 class="text-bold text-uppercase">Software Development</h4>
+						<p>Software development brings your business to new heights of integration
+                            allowing your company to be accessible from almost anywhere via smartphone or computer.
+                            It improves sales and service.
+                            The way your customers experience your business is very important and hence, taking care of this part is very crucial.
+						</p>
+					</div>
+				</div>-->
+			</div>
+
+		</div>
+		</div>
+			
+		<!-- spacer section:testimonial -->
+		<section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">				
+					<div class="col-lg-12">
+							<div class="align-center">
+										<div class="testimonial pad-top40 pad-bot40 clearfix">
+											<h5>
+                                                The purpose of Proxima is to facilitate learning,
+                                                giving you the wings to fly so that nothing can hold you back
+                                                and to provide professional services to clients in the IT field.
+                                                Proxima weaves your dream, gives it a structure turning it into reality
+                                                and preparing you to go out there, stronger- all that you need
+                                                to take a step forward moving toward that one goal!
+											</h5>
+											<br/>
+											<span class="author">&mdash; Sanjeda Sara <a href="#">www.proximaweb.com</a></span>
+										</div>
+
+								</div>
+							</div>
+					</div>
+				
+			</div>
+        </section>
+			
+		<!-- about -->
+		<section id="section-about" class="section appear clearfix">
+        <div class="about-section">
+        <div class="jumbotron jumbotron-fluid p-2">
+		<div class="container">
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated font-weight-bold text-bold pb-3" data-animation="bounceInUp">Our Team</h2>
+							<p>Here is a small glimpse of our service-provider. We are always ensuring the you get the best from Proxima.</p>
+						</div>
+					</div>
+				</div>
+
+					<div class="row align-center mar-bot40">
+                        {% for mem in mems %}
+                        <!--members-->
+						<div class="col-md-4">
+							<div class="team-member">
+								<figure class="member-photo"><img class="rounded-circle" src="{{ baseUrl }}/{{mem.img}}" alt="" /></figure>
+								<div class="team-detail">
+									<h4>{{mem.name}}</h4>
+									<span>{{ mem.desc }}</span>
+								</div>
+							</div>
+						</div>
+
+                        {% endfor %}
+						<!--<div class="col-md-3">
+							<div class="team-member">
+								<figure class="member-photo"><img src="{% static 'img/team/member2.jpg' %}" alt="" /></figure>
+								<div class="team-detail">
+									<h4>{{mem2.name}}</h4>
+									<span>{{ mem2.desc }}</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="team-member">
+								<figure class="member-photo"><img src="{% static 'img/team/member3.jpg' %}" alt="" /></figure>
+								<div class="team-detail">
+								<h4>{{mem3.name}}</h4>
+									<span>{{ mem3.desc }}</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="team-member">
+								<figure class="member-photo"><img src="{% static 'img/team/member4.jpg' %}" alt="" /></figure>
+								<div class="team-detail">
+								<h4>{{mem4.name}}</h4>
+									<span>{{ mem4.desc }}</span>
+								</div>
+							</div>
+						</div>-->
+					</div>
+						
+		    </div>
+        </div>
+        </div>
+		</section>
+
+		
+
+		<!--<section id="parallax1" class="section pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
+			<div class="container">
+            <div class="align-center pad-top40 pad-bot40">
+                <blockquote class="bigquote color-white">Indoctum accusamus comprehensam</blockquote>
+				<p class="color-white">Bootstraptaste</p>
+            </div>
+			</div>	
+		</section>-->
+		
+
+		<!--<section id="section-works" class="section appear clearfix">
+			<div class="container">
+				
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated" data-animation="bounceInUp">Portfolio</h2>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+						</div>
+					</div>
+				</div>
+					
+                        <div class="row">
+                          <nav id="filter" class="col-md-12 text-center">
+                            <ul>
+                              <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
+                              <li><a href="#"  class="btn-theme btn-small" data-filter=".webdesign" >Web Design</a></li>
+                              <li><a href="#"  class="btn-theme btn-small" data-filter=".photography">Photography</a></li>
+                              <li ><a href="#" class="btn-theme btn-small" data-filter=".print">Print</a></li>
+                            </ul>
+                          </nav>
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="portfolio-items isotopeWrapper clearfix" id="3">
+							  
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img1.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img1.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img2.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img2.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+								
+
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img3.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img3.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img4.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img4.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img5.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img5.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem webdesign">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img6.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img6.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img7.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img7.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem photography">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img8.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img8.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+
+                                <article class="col-md-4 isotopeItem print">
+									<div class="portfolio-item">
+										<img src="{% static 'img/portfolio/img9.jpg' %}" alt="" />
+										 <div class="portfolio-desc align-center">
+											<div class="folio-info">
+												<h5><a href="#">Portfolio name</a></h5>
+												<a href="{% static 'img/portfolio/img9.jpg' %}" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+											 </div>										   
+										 </div>
+									</div>
+                                </article>
+                                </div>
+							</div>
+							</div>
+                        </div>
+			</div>
+		</section>
+		<section id="parallax2" class="section parallax" data-stellar-background-ratio="0.5">	
+            <div class="align-center pad-top40 pad-bot40">
+                <blockquote class="bigquote color-white">Indoctum accusamus comprehensam</blockquote>
+				<p class="color-white">Bootstraptaste</p>
+            </div>
+		</section>-->
+    <!-- /about -->
+
+		<!-- contact -->
+		<section id="section-contact" class="section appear clearfix">
+			<div class="container">
+
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+							<p>Give us your feedback about our services. <br> For any query, Contact us: 01521256094</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="cform" id="contact-form">
+							<div id="sendmessage">
+								 Your message has been sent. Thank you!
+							</div>
+							<!--<form action="{% static 'contact/contact.php' %}" method="post" role="form" class="contactForm">
+                                {% csrf_token %}
+							  <div class="form-group">
+								<label for="name">Your Name</label>
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="email">Your Email</label>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="subject">Subject</label>
+								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="message">Message</label>
+                                  <label>
+                                      <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+                                  </label>
+                                  <div class="validation"></div>
+							  </div>
+							  <input type="submit" class="btn btn-theme pull-left" value="SEND MESSAGE">
+							</form>-->
+						</div>
+					</div>
+					<!-- ./span12 -->
+				</div>
+
+			</div>
+		</section>
+		<!-- map -->
+		<!--<section id="section-map" class="clearfix">
+			<div id="map"></div>
+		</section>-->
+		
+	<section id="footer" class="section footer">
+		<div class="container">
+			<div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
+				<div class="col-sm-12 align-center">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoTumblr" title="Tumblr"><i class="fab fa-tumblr"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>				
+				</div>
+			</div>
+
+			<div class="row align-center copyright">
+					<div class="col-sm-12"><p>Copyright &copy; 2020 Proxima - by <a href="#">Proxima</a></p></div>
+			</div>
+		</div>
+
+	</section>
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="{% static 'js/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>-->
+	<script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+	<script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+	<script src="{% static 'js/fancybox/jquery.fancybox.pack.js' %}"></script>
+	<script src="{% static 'js/skrollr.min.js' %}"></script>
+	<script src="{% static 'js/jquery.scrollTo-1.4.3.1-min.js' %}"></script>
+	<script src="{% static 'js/jquery.localscroll-1.2.7-min.js' %}"></script>
+	<script src="{% static 'js/stellar.js' %}"></script>
+	<script src="{% static 'js/jquery.appear.js' %}"></script>
+	<script src="{% static 'js/validate.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+        <!--<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [	{		featureType:"all",		elementType:"all",		stylers:[		{			invert_lightness:true		},		{			saturation:10		},		{			lightness:30		},		{			gamma:0.5		},		{			hue:"#1C705B"		}		]	}	]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                const mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                const map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>-->
+	</body>
+</html>

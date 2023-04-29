@@ -1,0 +1,156 @@
+body{
+	background: linear-gradient(to right, #01a9ac, #01dbdf);
+}
+.upf{
+	margin: 40px auto;
+	text-align: center;
+	width: 598px;
+	background: linear-gradient(to right, #2bc0e, #01dbdf);
+		
+		color: white;
+		padding: 5px 0px 5px 0px;
+		text-align: center;
+		border-radius: 15px 15px 15px 15px; 
+}
+.deet{
+	
+	margin: 40px auto;
+	text-align: center;
+	width: 598px;
+	background: linear-gradient(to right, #01a9ac, #01dbdf);
+		
+		color: white;
+		padding: 5px 0px 5px 0px;
+		text-align: center;
+		border-radius: 15px 15px 15px 15px;
+	
+
+}
+
+.main{
+		background-color: rgb(0,0,0,0.25);
+		width: 800px;
+		margin: auto;
+	}
+	form{
+		padding: 10px;
+	}
+
+
+
+.uname{
+		position: relative;
+		left: 200px;
+		top: -30px;
+		width: 480px;
+		line-height: 40px;
+		border-radius:6px;
+		padding: 0 10px;
+		font-size:16px;
+		outline-color: #008080;
+	}
+
+	#name{
+		width: 80%;
+		height: 80px;
+	}
+	.name{
+		margin-left: 25px;
+		margin-top: 30px;
+		color: white;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	.desc{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		border-radius:6px;
+		padding: 0 10px;
+		width: 480px;
+		font-size:16px;
+		outline-color: #008080;
+
+	}
+	.req{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		border-radius:6px;
+		padding: 0 10px;
+		width: 480px;
+		font-size:16px;
+		outline-color: #008080;
+	}
+
+	.ddate{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		width: 480px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		outline-color: #008080;
+	}
+	.p_address{
+		position: relative;
+		left: 200px;
+		top: -37px;
+		line-height: 40px;
+		width: 480px;
+		border-radius: 6px;
+		padding: 0 22px;
+		font-size: 16px;
+		color: #555;
+		overflow: hidden;
+		outline-color: #40B5AD;
+	}
+
+
+
+	.note{
+		margin: 40px auto;
+		text-align: center;
+		width: 598px;
+		background: linear-gradient(to right, #01a9ac, #01dbdf);
+		color: white;
+		padding: 5px 0px 5px 0px;
+		text-align: center;
+		border-radius: 15px 15px 15px 15px;
+	}
+	.note2{
+		margin: 40px auto;
+		text-align: center;
+		width: 598px;
+		background: linear-gradient(to right, #01a9ac, #01dbdf);
+		color: white;
+		padding: 5px 0px 5px 0px;
+		text-align: center;
+		border-radius: 15px 15px 15px 15px;
+	}
+
+
+
+	.btnnn{
+            border: none;
+            outline: none;
+            height:  50px;
+            width: 100%;
+            background-color: teal;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 20px;
+
+          }
+          .btnnn:hover{
+            background: linear-gradient(to right, #01a9ac, #01dbdf);
+            border: 1px solid;
+            color: white;
+            box-shadow: 0 5px 15px rgba(145,92,182,0.4)
+          }

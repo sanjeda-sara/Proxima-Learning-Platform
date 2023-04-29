@@ -1,0 +1,100 @@
+body{
+	background-color: white /*#1c2833*/;
+}
+*:focus{
+	outline: none;
+}
+
+.box{
+	box-sizing: border-box;
+	width: 360px;
+	height: 600px;
+	border: 2px solid #3498db;
+	box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+	border-radius: 5px;
+	background-color: teal;
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+
+.btn1{
+	float: left;
+	margin: 10px 0 0 18.2%;
+}
+.btn2{
+	float: left;
+	margin: 10px 18.2% 0 0;
+}
+
+.uname{
+	position: relative;
+		left: 460px;
+		top: -80px;
+		line-height: 40px;
+		border-radius: 6px;
+		padding: 0 10px;
+		width: 35%;
+		font-size: 16px;
+		color: #555;
+		outline-color: #008080;
+}
+
+
+input[type="text"],
+input[type="email"]{
+	display: block;
+	box-sizing: border-box;
+	background: none;
+	color: white;
+	margin-bottom: 30px;
+	padding: 4px;
+	width: 220px;
+	height: 32px;
+	border: none;
+	border-bottom: 1px solid white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	transition: 0.25 ease;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus{
+	border-bottom: 2px solid white;
+	border-bottom-right-radius: 20px;
+	color: white;
+	transition: 0.2 ease;
+}
+button{
+	border: 1px solid #3498db;
+	background-color: white;
+	color: teal;
+	height: 30px;
+	width: 100px;
+	border-radius: 5px;
+	margin: 0px;
+	transition: all 0.3s;
+}
+button:hover{
+	transform: scale(1.1);
+}
+
+/*input[type="file"]{
+	display: none;
+}
+label{
+	box-sizing: border-box;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	border: 1px solid #3498db;
+	padding: 2px 1px;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+label:hover{
+	background-color: #3498db;
+	color: black;
+}*/
